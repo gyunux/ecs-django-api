@@ -1,12 +1,12 @@
 import socket
 from django.http import JsonResponse
-from .models import Product
 
-def product_list(request):
+def load_balance_test(request):
 
     container_id = socket.gethostname()
-    data = {
+    response_data = {
+        "message": "Load Balancing Test Success!",
         "handled_by": container_id
     }
 
-    return JsonResponse(data)
+    return JsonResponse(response_data)

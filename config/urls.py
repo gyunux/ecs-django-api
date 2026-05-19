@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from myapi.views import load_balance_test
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('loadbalance',load_balance_test,name='load_balance_test'),
 ]
